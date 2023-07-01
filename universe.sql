@@ -207,48 +207,37 @@ INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_i
     'The Freezeflame Galaxy consists of a piece of frozen water, ice, and hot magma. It contains Ice Flowers and Fire Flowers.', 
     4284, -- Arbitrary Numbers
     522500 -- Arbitrary Numbers
-);
-INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_in_ly) VALUES(
+), (
     2, 
     'Honeyclimb Galaxy', 
     'The Honeyclimb Galaxy is located in the Bedroom. This galaxy tests Marios skill with the Bee Mushroom. It only contains a single Power Star.', 
     25910, -- Arbitrary Numbers
     2100 -- Arbitrary Numbers
-);
-INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_in_ly) VALUES(
+), (
     3, 
     'Ghostly Galaxy', 
     'The Ghostly Galaxy is located in the Kitchen and the second encountered. Its unlocking criterea is to get 20 Power Stars, including the Grand Stars in Bowser Jr.s Robot Reactor and Bowsers Star Reactor. The galaxy is ghost themed and the boss is Bouldergeist. Luigi makes his first appearance in this galaxy.', 
     139, -- Arbitrary Numbers
     2491 -- Arbitrary Numbers
-);
-INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_in_ly) VALUES(
+), (
     4, 
     'Deep Dark Galaxy', 
     'The Deep Dark Galaxy features an underwater cavern. In order to unlock this galaxy, Mario must get 46 Power Stars. The Toad Brigade and the Starshroom appear in this galaxy. It is a ghost-themed galaxy, like the Boos Boneyard Galaxy and the Ghostly Galaxy, although its theme is closer to that of an abandoned cave. The main planet in it has a beach with many Crabbers. There are very few planets aside from the big, main one. Guppy makes his second appearance here.', 
     19495, -- Arbitrary Numbers
     2049 -- Arbitrary Numbers
-);
-INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_in_ly) VALUES(
+), (
     5, 
     'Snow Cap Galaxy', 
     'The Snow Cap Galaxy is a galaxy that has Mario chase down Star Bunnies on a snow-covered planet. The Fire Flower makes an appearance in this galaxy. It is accessed via the Hungry Luma next to the Garden, which only appears after The Sinking Lava Spire has been completed.', 
     1848, -- Arbitrary Numbers
     1294 -- Arbitrary Numbers
-);
-INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_in_ly) VALUES(
+), (
     6, 
     'Matter Splatter Galaxy', 
     'The Matter Splatter Galaxy basically consists of matter everywhere. And theres just one problem: Its there one second and the next, its gone. If Mario is not careful, or he makes one single mistake, he will fall into the cosmos and youll have to try again. This is a really hard mission if the player doesnt know what he or she is doing.', 
     294194, -- Arbitrary Numbers
     19535 -- Arbitrary Numbers
 );
-
---
--- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
---
-
-
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
@@ -261,69 +250,82 @@ INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description,
     'Random objects appear and disappear at a steady rate. Not sure why though.',
     6, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     6, 
     'Flip Flop Planet', 
     5,
     'There are a bunch of buttons that make some objects dissapear, and others reappear in their place. Pretty strange, right?',
     6, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     5, 
     'Frozen Peak Planet', 
     -45,
     'Literally Mt. Everest. I assume its pretty dangerous',
     5, -- star_id
     true -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     4, 
     'Noir Sea Planet', 
     -20,
     'A pitch black sea with terrifying creatures lurking below. Sounds like a nice beach day!',
     4, -- star_id
     true -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     3, 
     'Haunted House Planet',
     0,
     'Its a haunted house.' ,
     3, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     3, 
     'Ghastly Planet', 
     -5,
     'A scary planet meant for only the dead to go. Enter only if you wish to see the horrors of the paranormal.',
     3, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     1, 
     'Scorched Planet', 
     255,
     'This planet is way too hot. Magma is located everywhere you look.',
     1, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     1, 
     'Freezeburned Planet', 
     -150,
     'A planet so cold it got burnt. Maybe dont go there.',
     1, -- star_id
     false -- has life
-);
-INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
+), (
     2, 
     'Sweet Comb Planet', 
     1,
     'An incredibly sweet planet. Filled to the brim with cute and fluffy bees. Plus there are tons of honeycombs.',
     2, -- star_id
+    true -- has life
+), (
+    2, 
+    'Farmstead Planet', 
+    1,
+    'It seems the bees here have taken to a life of farming. It appears they enjoy seeing the fruits of their labor after pollination their crops.',
+    2, -- star_id
+    true -- has life
+), (
+    1, 
+    'Glass Eruptions Planet', 
+    1,
+    'The entire planet is made up of ice like formations. Occasionally these formations spontaneously erupt out of seemingly nowhere.',
+    1, -- star_id
+    true -- has life
+), (
+    3, 
+    'Abstract Planet', 
+    1,
+    '"From my observations, I notice many abrubt random movement from the terrain and objects around me. It looks like any normal forest, but the atmosphere is bleak and dark." - Star Traveler',
+    3, -- star_id
     true -- has life
 );
 
@@ -331,12 +333,40 @@ INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description,
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (1, 'Hot And Cold Star', 19259, 1900000);
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (2, 'Cookie Star', 1295, 28350);
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (3, 'Wisp Star', 128599, 1850);
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (4, 'Black Star', 81259, 89025);
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (5, 'Frozen Solid Star', 91559, 7728);
-INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES (6, 'Light Switch Star', 853210, 8913);
+INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES 
+    (1, 'Hot And Cold Star', 19259, 1900000), 
+    (2, 'Cookie Star', 1295, 28350), 
+    (3, 'Wisp Star', 128599, 1850),
+    (4, 'Black Star', 81259, 89025),
+    (5, 'Frozen Solid Star', 91559, 7728),
+    (6, 'Light Switch Star', 853210, 8913);
+
+
+--
+-- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+INSERT INTO public.moon(planet_id, name, spherical, has_atmosphere) VALUES 
+    (1, 'Lego Brick', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false),
+    (0, '', false, false);
 
 --
 -- Name: comet_comet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
@@ -418,7 +448,7 @@ ALTER TABLE ONLY public.moon
 --
 
 ALTER TABLE ONLY public.moon
-    ADD CONSTRAINT moon_planet_id_key UNIQUE (planet_id);
+    ADD CONSTRAINT moon_moon_id_key UNIQUE (moon_id);
 
 
 --
