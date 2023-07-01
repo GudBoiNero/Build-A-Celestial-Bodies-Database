@@ -194,7 +194,12 @@ ALTER TABLE public.star OWNER TO freecodecamp;
 -- Data for Name: comet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-
+INSERT INTO public.comet(galaxy_id, name, tail_length_in_km, nucleus_size_in_km) VALUES
+    (1, 'Prince Ruperts Comet', 2040, 230),
+    (4, 'Noir Ball Comet', 1403, 3503),
+    (4, 'Invisible Comet', -1, 2205),
+    (3, 'Ghastly Orb Comet', 19493, 29595),
+    (2, 'Berry Comet', 20215, 1002);
 
 --
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
@@ -246,14 +251,14 @@ INSERT INTO public.galaxy(galaxy_id, name, description, distance_in_ly, radius_i
 INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description, star_id, has_life) VALUES (
     6, 
     'Switch Swap Planet', 
-    0,
+    20,
     'Random objects appear and disappear at a steady rate. Not sure why though.',
     6, -- star_id
     false -- has life
 ), (
     6, 
     'Flip Flop Planet', 
-    5,
+    13,
     'There are a bunch of buttons that make some objects dissapear, and others reappear in their place. Pretty strange, right?',
     6, -- star_id
     false -- has life
@@ -274,7 +279,7 @@ INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description,
 ), (
     3, 
     'Haunted House Planet',
-    0,
+    -15,
     'Its a haunted house.' ,
     3, -- star_id
     false -- has life
@@ -302,28 +307,28 @@ INSERT INTO public.planet(galaxy_id, name, average_temp_in_celsius, description,
 ), (
     2, 
     'Sweet Comb Planet', 
-    1,
+    10,
     'An incredibly sweet planet. Filled to the brim with cute and fluffy bees. Plus there are tons of honeycombs.',
     2, -- star_id
     true -- has life
 ), (
     2, 
     'Farmstead Planet', 
-    1,
+    15,
     'It seems the bees here have taken to a life of farming. It appears they enjoy seeing the fruits of their labor after pollination their crops.',
     2, -- star_id
     true -- has life
 ), (
     1, 
     'Glass Eruptions Planet', 
-    1,
+    -5,
     'The entire planet is made up of ice like formations. Occasionally these formations spontaneously erupt out of seemingly nowhere.',
     1, -- star_id
     true -- has life
 ), (
     3, 
     'Abstract Planet', 
-    1,
+    2,
     '"From my observations, I notice many abrubt random movement from the terrain and objects around me. It looks like any normal forest, but the atmosphere is bleak and dark." - Star Traveler',
     3, -- star_id
     true -- has life
@@ -347,26 +352,26 @@ INSERT INTO public.star(galaxy_id, name, distance_in_ly, mass_in_kg) VALUES
 --
 
 INSERT INTO public.moon(planet_id, name, spherical, has_atmosphere) VALUES 
-    (1, 'Lego Brick', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false),
-    (0, '', false, false);
+    (1, 'Lego Brick Moon', false, false),
+    (10, 'Choc. Chip Moon', false, true),
+    (10, 'Honeycomb Moon', false, true),
+    (4, 'Holey Hell Moon', false, false),
+    (2, 'Rubix Moon', false, false),
+    (11, 'Frigid Waste Moon', false, false),
+    (8, 'Molten (Star?) Moon', true, false),
+    (8, 'Ice Cube Moon', false, false),
+    (8, 'Ice Ball Moon', true, false),
+    (3, 'Everests Moon', false, true),
+    (1, 'South Moon', true, false),
+    (1, 'North Moon', true, false),
+    (6, 'Ghostly Apparition Moon', false, false),
+    (6, 'Phantom Moon', false, false),
+    (6, 'Specter Paradise Moon', false, false),
+    (6, 'Unholy Moon', false, false),
+    (10, 'Pitch Fork Moon', false, false),
+    (10, 'Shovel Moon', false, false),
+    (6, 'Scorched Moon', false, false),
+    (6, 'Burnt Crisp Moon', false, false);
 
 --
 -- Name: comet_comet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
@@ -404,11 +409,11 @@ SELECT pg_catalog.setval('public.star_star_id_seq', 8, true);
 
 
 --
--- Name: comet comet_galaxy_id_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: comet comet_comet_id_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.comet
-    ADD CONSTRAINT comet_galaxy_id_key UNIQUE (galaxy_id);
+    ADD CONSTRAINT comet_comet_id_key UNIQUE (comet_id);
 
 
 --
